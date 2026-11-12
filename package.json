@@ -1,0 +1,20 @@
+{
+  "name": "sbom-diff",
+  "version": "0.1.0",
+  "description": "Compare two CycloneDX SBOMs: added, removed, upgraded and downgraded components, license changes and policy gates.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": { "sbom-diff": "dist/src/cli.js" },
+  "files": ["dist/src"],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/test/diff.test.js",
+    "lint": "tsc --noEmit"
+  },
+  "repository": "github:jvch0512/sbom-diff",
+  "keywords": ["sbom", "cyclonedx", "supply-chain", "security", "typescript"],
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" },
+  "engines": { "node": ">=20" }
+}
